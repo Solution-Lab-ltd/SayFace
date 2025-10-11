@@ -1,0 +1,51 @@
+SayFace Privacy Policy
+Last updated: 2024-04-27
+
+1. Overview
+   SayFace is a pay-as-you-go iOS app that generates AI talking-head videos based on the short message you provide. We do not create user accounts, we do not run advertising, and we only collect the minimum information required to render a video and process the optional in-app purchase.
+
+2. Information We Collect
+   2.1. From your device (stored locally):
+        • Script text you enter, the creative options you pick, the job ID provided by the server, status updates, timestamps, and per-job cost data. This data is saved inside the app’s sandbox (UserDefaults) so you can revisit recent jobs.
+        • The MP4 video file generated for each completed job, stored in the app’s “Videos” folder on device.
+   2.2. Sent to our server (processed temporarily in memory):
+        • The same script and customization options listed above so we can contact OpenAI’s Sora 2 service on your behalf.
+        • The job identifier returned by OpenAI so we can poll for completion and proxy the download back to your device.
+        • Moderation results supplied by OpenAI’s Moderation API to ensure the script complies with App Store rules. The server logs include a truncated prompt preview (limited to the first 150 characters) for troubleshooting.
+        • Basic operational metadata (timestamps, success/failure state). We do not store IP addresses, device identifiers, or payment details on our server.
+
+3. How We Use Your Information
+   • Generate AI videos by forwarding your script and selected options to OpenAI’s Sora 2 API.
+   • Run content checks through OpenAI’s Moderation API to block prohibited content.
+   • Send the finished video back to your device and update local job history so you can manage downloads.
+   • Diagnose reliability issues through short-lived server logs. We do not create persistent profiles or analytics reports.
+
+4. Data Retention
+   • On device: Job history and downloaded videos remain until you delete them from the app or uninstall SayFace.
+   • On server: Job data lives only in server memory. It is replaced when the job completes, fails, or the server restarts; we do not persist jobs to databases or disk.
+   • Logs: Console logs rotate with the hosting provider and contain only truncated prompt previews and generic status messages.
+
+5. Sharing with Third Parties
+   • OpenAI: We share your script, selections, and moderation requests with OpenAI to render the video.
+   • Apple: All payments are processed by Apple via StoreKit. We do not see your Apple ID, payment card, or billing address.
+   • System share extensions (Photos, Messages, social apps) receive a copy of the exported video only when you choose to share it. SayFace does not track the destinations you pick.
+   We do not sell or rent your data and we do not integrate advertising SDKs.
+
+6. Security
+   • All requests to our backend are sent over HTTPS.
+   • API keys for third-party services are stored on the server side using environment variables, never inside the distributed app binary.
+   • Videos saved on device remain inside Apple’s application sandbox. If you use iCloud backup, Apple’s policies govern storage there.
+
+7. Your Choices
+   • You can delete any generated video or job record from within the app.
+   • You may remove all locally stored data by uninstalling SayFace.
+   • To stop sharing data with OpenAI via SayFace, simply stop submitting scripts or delete the app.
+
+8. Children’s Privacy
+   SayFace targets general audiences but requires users to agree to Apple’s terms when making purchases. We do not knowingly collect personal information from children under 13. If we learn that we have inadvertently processed such information, we will delete it promptly.
+
+9. Changes to This Policy
+   We may update this policy as we add features or change service providers. We will post the revised policy in the same GitHub directory and update the “Last updated” date. Material changes will also be highlighted in the App Store listing.
+
+10. Contact
+    Please email privacy@sayface.app with any questions or requests about this policy.
