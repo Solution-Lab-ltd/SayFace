@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SayFace Support</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #f7f8fa;
+      --fg: #1f2933;
+      --accent: #2563eb;
+      --card-bg: #ffffff;
+      --border: #d0d7de;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background-color: var(--bg);
+      color: var(--fg);
+      line-height: 1.5;
+      padding: 2.5rem 1rem;
+      display: flex;
+      justify-content: center;
+    }
+
+    main {
+      max-width: 720px;
+      width: 100%;
+      background-color: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2rem 2.5rem;
+      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+    }
+
+    h1 {
+      margin-top: 0;
+      font-size: 2rem;
+    }
+
+    p {
+      margin: 0 0 1rem;
+    }
+
+    form {
+      display: grid;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    label {
+      font-weight: 600;
+    }
+
+    input,
+    textarea,
+    button {
+      font: inherit;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 0.75rem 1rem;
+      width: 100%;
+    }
+
+    textarea {
+      min-height: 180px;
+      resize: vertical;
+    }
+
+    button {
+      cursor: pointer;
+      background-color: var(--accent);
+      color: #fff;
+      border: none;
+      font-weight: 600;
+      transition: opacity 0.2s ease;
+    }
+
+    button:hover,
+    button:focus-visible {
+      opacity: 0.9;
+    }
+
+    .note {
+      font-size: 0.9rem;
+      color: #556;
+    }
+
+    .mailto {
+      margin-top: 1.5rem;
+      font-size: 0.95rem;
+    }
+
+    .mailto a {
+      color: var(--accent);
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .mailto a:hover,
+    .mailto a:focus-visible {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>SayFace Support</h1>
+    <p>Need help with SayFace? Use the form below to send your request directly to the team. We typically respond within two business days.</p>
+    <p class="note">Please include as much detail as possible, especially steps to reproduce any issues you encounter.</p>
+
+    <form action="https://formsubmit.co/form@selectic.app" method="POST">
+      <input type="hidden" name="_subject" value="SayFace Support Request">
+      <input type="hidden" name="_template" value="table">
+      <input type="text" name="_honey" style="display:none">
+      <input type="hidden" name="_captcha" value="false">
+
+      <label>
+        Name
+        <input type="text" name="name" placeholder="Jane Doe" required>
+      </label>
+
+      <label>
+        Email
+        <input type="email" name="email" placeholder="you@example.com" required>
+      </label>
+
+      <label>
+        Subject
+        <input type="text" name="subject" placeholder="Describe your question in a few words" required>
+      </label>
+
+      <label>
+        Message
+        <textarea name="message" placeholder="Tell us how we can help" required></textarea>
+      </label>
+
+      <button type="submit">Send message</button>
+    </form>
+
+    <p class="mailto">Prefer email? Reach us at <a href="mailto:form@selectic.app">form@selectic.app</a>.</p>
+  </main>
+</body>
+</html>

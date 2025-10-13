@@ -48,4 +48,4 @@ Last updated: 2024-04-27
    We may update this policy as we add features or change service providers. We will post the revised policy in the same GitHub directory and update the “Last updated” date. Material changes will also be highlighted in the App Store listing.
 
 10. Contact
-    Please email privacy@sayface.app with any questions or requests about this policy.
+    Please email form@selectic.app with any questions or requests about this policy.

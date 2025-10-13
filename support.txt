@@ -1,0 +1,15 @@
+Support
+Primary URL: https://solution-lab-ltd.github.io/SayFace/support/
+
+Contact options available on the page:
+- Form submissions are sent to form@selectic.app via formsubmit.co.
+- Direct mailto link to form@selectic.app for users who prefer sending an email.
+
+How to (re)deploy the page
+1. Keep the form markup in docs/support/index.html.
+2. Enable GitHub Pages in the repository settings with Source = `main` and Directory = `/docs`.
+3. Wait ~2 minutes for the page to appear at https://solution-lab-ltd.github.io/SayFace/support/.
+4. When prompted by formsubmit.co (first submission only), confirm the forwarding by clicking the link sent to form@selectic.app.
+
+App Store Connect
+- Use https://solution-lab-ltd.github.io/SayFace/support/ as the Support URL.
