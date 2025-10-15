@@ -13,6 +13,8 @@ Last updated: 2024-04-27
         • The job identifier returned by OpenAI so we can poll for completion and proxy the download back to your device.
         • Moderation results supplied by OpenAI’s Moderation API to ensure the script complies with App Store rules. The server logs include a truncated prompt preview (limited to the first 150 characters) for troubleshooting.
         • Basic operational metadata (timestamps, success/failure state). We do not store IP addresses, device identifiers, or payment details on our server.
+   2.3. Face and biometric data:
+        • SayFace does not capture camera input, scan a user’s likeness, or collect any biometric identifiers. The talking head in each video is a synthetic character generated entirely from the text prompt and style options you provide.
 
 3. How We Use Your Information
    • Generate AI videos by forwarding your script and selected options to OpenAI’s Sora 2 API.
@@ -22,7 +24,7 @@ Last updated: 2024-04-27
 
 4. Data Retention
    • On device: Job history and downloaded videos remain until you delete them from the app or uninstall SayFace.
-   • On server: Job data lives only in server memory. It is replaced when the job completes, fails, or the server restarts; we do not persist jobs to databases or disk.
+   • On server: Job requests (script text, options, job identifier, status) are kept in memory and in a small JSON cache so we can resume polling after restarts. Completed jobs are purged automatically after 24 hours; failed jobs are removed when you retry or after 24 hours of inactivity.
    • Logs: Console logs rotate with the hosting provider and contain only truncated prompt previews and generic status messages.
 
 5. Sharing with Third Parties
